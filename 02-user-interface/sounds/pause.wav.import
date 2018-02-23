@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/pause.wav-3952e3ea88fa95de0af2f9b00cc21fc6.sample"
+
+[deps]
+
+source_file="res://sounds/pause.wav"
+source_md5="8c0b310b2f8d869d03db4299deb146bf"
+
+dest_files=[ "res://.import/pause.wav-3952e3ea88fa95de0af2f9b00cc21fc6.sample" ]
+dest_md5="79ae5ab7cd74610aec7a8ea4790fab8a"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
