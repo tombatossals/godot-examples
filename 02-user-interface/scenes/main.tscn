@@ -14,6 +14,7 @@ _sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
 
 [node name="TitleScreen" type="TextureRect" parent="." index="0"]
 
+editor/display_folded = true
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -111,7 +112,7 @@ size_flags_horizontal = 2
 size_flags_vertical = 2
 color = Color( 0.129412, 0.121569, 0.203922, 1 )
 script = ExtResource( 3 )
-_sections_unfolded = [ "Anchor", "Material", "Pause", "Rect", "Size Flags", "Visibility" ]
+_sections_unfolded = [ "Anchor", "Margin", "Material", "Pause", "Rect", "Size Flags", "Visibility" ]
 
 [node name="Label" type="Label" parent="Pause" index="0"]
 
@@ -143,6 +144,24 @@ max_distance = 2000.0
 attenuation = 1.0
 bus = "Master"
 area_mask = 1
+
+[node name="ColorRect" type="ColorRect" parent="Pause" index="2"]
+
+modulate = Color( 1, 1, 1, 0.591176 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 68.0
+margin_right = 272.0
+margin_bottom = 90.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 1, 1, 1, 1 )
+_sections_unfolded = [ "Grow Direction", "Margin", "Rect", "Size Flags", "Visibility" ]
 
 [node name="Exit2" type="ColorRect" parent="." index="2"]
 

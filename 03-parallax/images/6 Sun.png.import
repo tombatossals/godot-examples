@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/6 Sun.png-9f257ab9047e6b5af17ba0ed49404f69.stex"
+
+[deps]
+
+source_file="res://images/6 Sun.png"
+source_md5="35f209a3bb85343e919d705f61eec668"
+
+dest_files=[ "res://.import/6 Sun.png-9f257ab9047e6b5af17ba0ed49404f69.stex" ]
+dest_md5="e163101b07e375ac22e92f0da6b5422a"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

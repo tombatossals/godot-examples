@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/4 Layer4.png-802f91d2ecd5130ad366370ea9c1ca1f.stex"
+
+[deps]
+
+source_file="res://images/4 Layer4.png"
+source_md5="87910c6a46522bfd83530411a10e1913"
+
+dest_files=[ "res://.import/4 Layer4.png-802f91d2ecd5130ad366370ea9c1ca1f.stex" ]
+dest_md5="c1aa1eca86f05be1f4d29ee1cb777f0a"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

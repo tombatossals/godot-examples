@@ -1,0 +1,220 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://scenes/main.gd" type="Script" id=1]
+[ext_resource path="res://scenes/ParallaxTitleScreen.gd" type="Script" id=2]
+[ext_resource path="res://images/9 Background.png" type="Texture" id=3]
+[ext_resource path="res://images/6 Sun.png" type="Texture" id=4]
+[ext_resource path="res://images/5 Mountains.png" type="Texture" id=5]
+[ext_resource path="res://images/7 Clouds2.png" type="Texture" id=6]
+[ext_resource path="res://images/4 Layer4.png" type="Texture" id=7]
+[ext_resource path="res://images/3 Layer3.png" type="Texture" id=8]
+[ext_resource path="res://images/2 Layer2.png" type="Texture" id=9]
+[ext_resource path="res://images/1 Layer1.png" type="Texture" id=10]
+
+[node name="Root" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+_sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
+
+[node name="ParallaxTitleScreen" type="ParallaxBackground" parent="." index="0"]
+
+layer = -1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+scroll_offset = Vector2( 0, 0 )
+scroll_base_offset = Vector2( 0, 0 )
+scroll_base_scale = Vector2( 1, 1 )
+scroll_limit_begin = Vector2( 0, 0 )
+scroll_limit_end = Vector2( 0, 0 )
+scroll_ignore_camera_zoom = true
+script = ExtResource( 2 )
+_sections_unfolded = [ "Scroll" ]
+
+[node name="Horizon" type="ParallaxLayer" parent="ParallaxTitleScreen" index="0"]
+
+motion_scale = Vector2( 0, 1 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 1920, 0 )
+_sections_unfolded = [ "Motion", "Transform" ]
+
+[node name="Image" type="TextureRect" parent="ParallaxTitleScreen/Horizon" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 3 )
+stretch_mode = 0
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Mouse", "Rect", "Size Flags", "Visibility" ]
+
+[node name="Sun" type="ParallaxLayer" parent="ParallaxTitleScreen" index="1"]
+
+motion_scale = Vector2( 0, 1 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 1920, 0 )
+_sections_unfolded = [ "Motion" ]
+
+[node name="Image" type="TextureRect" parent="ParallaxTitleScreen/Sun" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 4 )
+stretch_mode = 0
+
+[node name="Mountains1" type="ParallaxLayer" parent="ParallaxTitleScreen" index="2"]
+
+motion_scale = Vector2( 1, 1 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 1920, 0 )
+_sections_unfolded = [ "Motion" ]
+
+[node name="Image" type="TextureRect" parent="ParallaxTitleScreen/Mountains1" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 5 )
+stretch_mode = 0
+
+[node name="Clouds" type="ParallaxLayer" parent="ParallaxTitleScreen" index="3"]
+
+motion_scale = Vector2( 0.8, 1 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 1920, 0 )
+_sections_unfolded = [ "Motion" ]
+
+[node name="Image" type="TextureRect" parent="ParallaxTitleScreen/Clouds" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 6 )
+stretch_mode = 0
+
+[node name="Mountains2" type="ParallaxLayer" parent="ParallaxTitleScreen" index="4"]
+
+motion_scale = Vector2( 1.4, 1 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 1920, 0 )
+_sections_unfolded = [ "Motion" ]
+
+[node name="Image" type="TextureRect" parent="ParallaxTitleScreen/Mountains2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 7 )
+stretch_mode = 0
+
+[node name="Mountains3" type="ParallaxLayer" parent="ParallaxTitleScreen" index="5"]
+
+motion_scale = Vector2( 1.8, 1 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 1920, 0 )
+_sections_unfolded = [ "Motion" ]
+
+[node name="Image" type="TextureRect" parent="ParallaxTitleScreen/Mountains3" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 8 )
+stretch_mode = 0
+
+[node name="Terrain1" type="ParallaxLayer" parent="ParallaxTitleScreen" index="6"]
+
+motion_scale = Vector2( 3, 1 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 1920, 0 )
+_sections_unfolded = [ "Motion" ]
+
+[node name="Image" type="TextureRect" parent="ParallaxTitleScreen/Terrain1" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 9 )
+stretch_mode = 0
+
+[node name="Terrain2" type="ParallaxLayer" parent="ParallaxTitleScreen" index="7"]
+
+motion_scale = Vector2( 4, 1 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 1920, 0 )
+_sections_unfolded = [ "Motion" ]
+
+[node name="Image" type="TextureRect" parent="ParallaxTitleScreen/Terrain2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 10 )
+stretch_mode = 0
+
+
