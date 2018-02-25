@@ -1,0 +1,372 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://scenes/main.gd" type="Script" id=1]
+[ext_resource path="res://fonts/ARCADE.TTF" type="DynamicFontData" id=2]
+[ext_resource path="res://scenes/ParallaxTitleScreen.gd" type="Script" id=3]
+[ext_resource path="res://images/_11_background.png" type="Texture" id=4]
+[ext_resource path="res://images/_10_distant_clouds.png" type="Texture" id=5]
+[ext_resource path="res://images/_07_huge_clouds.png" type="Texture" id=6]
+[ext_resource path="res://images/_05_hill1.png" type="Texture" id=7]
+[ext_resource path="res://images/_03_distant_trees.png" type="Texture" id=8]
+[ext_resource path="res://images/_04_bushes.png" type="Texture" id=9]
+[ext_resource path="res://images/_02_trees and bushes.png" type="Texture" id=10]
+[ext_resource path="res://images/_01_ground.png" type="Texture" id=11]
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 96
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 2 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[sub_resource type="DynamicFontData" id=2]
+
+font_path = "res://fonts/ARCADE.TTF"
+
+[sub_resource type="DynamicFont" id=3]
+
+size = 64
+use_mipmaps = false
+use_filter = false
+extra_spacing_top = 12
+font_data = SubResource( 2 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[node name="Root" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+_sections_unfolded = [ "Material", "Transform", "Visibility", "Z Index" ]
+
+[node name="FPSLabel" type="Label" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 1607.0
+margin_top = 23.0
+margin_right = 1757.0
+margin_bottom = 120.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+text = "FPS"
+align = 2
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Grow Direction", "custom_constants", "custom_fonts", "custom_styles" ]
+
+[node name="ParallaxTitleScreen" type="ParallaxBackground" parent="." index="1"]
+
+editor/display_folded = true
+layer = -1
+offset = Vector2( -70, -200 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, -70, -200 )
+scroll_offset = Vector2( 0, 0 )
+scroll_base_offset = Vector2( 0, 0 )
+scroll_base_scale = Vector2( 1, 1 )
+scroll_limit_begin = Vector2( 0, 0 )
+scroll_limit_end = Vector2( 0, 0 )
+scroll_ignore_camera_zoom = true
+script = ExtResource( 3 )
+_sections_unfolded = [ "Scroll" ]
+
+[node name="Horizon" type="ParallaxLayer" parent="ParallaxTitleScreen" index="0"]
+
+motion_scale = Vector2( 0, 1 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 0, 0 )
+_sections_unfolded = [ "Motion", "Transform" ]
+
+[node name="Image" type="TextureRect" parent="ParallaxTitleScreen/Horizon" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 4 )
+stretch_mode = 6
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Mouse", "Rect", "Size Flags", "Visibility" ]
+
+[node name="DistantClouds" type="ParallaxLayer" parent="ParallaxTitleScreen" index="1"]
+
+motion_scale = Vector2( 0.5, 1 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 2048, 0 )
+_sections_unfolded = [ "Motion", "Transform" ]
+
+[node name="Image" type="TextureRect" parent="ParallaxTitleScreen/DistantClouds" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 5 )
+stretch_mode = 6
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Mouse", "Rect", "Size Flags", "Visibility" ]
+
+[node name="HugeClouds" type="ParallaxLayer" parent="ParallaxTitleScreen" index="2"]
+
+motion_scale = Vector2( 0, 1 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 2048, 0 )
+_sections_unfolded = [ "Motion", "Transform" ]
+
+[node name="Image" type="TextureRect" parent="ParallaxTitleScreen/HugeClouds" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 6 )
+stretch_mode = 6
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Mouse", "Rect", "Size Flags", "Visibility" ]
+
+[node name="Hills" type="ParallaxLayer" parent="ParallaxTitleScreen" index="3"]
+
+motion_scale = Vector2( 4, 1 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 2048, 0 )
+_sections_unfolded = [ "Motion", "Transform" ]
+
+[node name="Image" type="TextureRect" parent="ParallaxTitleScreen/Hills" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 7 )
+stretch_mode = 6
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Mouse", "Rect", "Size Flags", "Visibility" ]
+
+[node name="DistantTress" type="ParallaxLayer" parent="ParallaxTitleScreen" index="4"]
+
+motion_scale = Vector2( 4, 1 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 2048, 0 )
+_sections_unfolded = [ "Motion", "Transform" ]
+
+[node name="Image" type="TextureRect" parent="ParallaxTitleScreen/DistantTress" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 8 )
+stretch_mode = 6
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Mouse", "Rect", "Size Flags", "Visibility" ]
+
+[node name="Bushes" type="ParallaxLayer" parent="ParallaxTitleScreen" index="5"]
+
+motion_scale = Vector2( 8, 1 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 2048, 0 )
+_sections_unfolded = [ "Motion", "Transform" ]
+
+[node name="Image" type="TextureRect" parent="ParallaxTitleScreen/Bushes" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 9 )
+stretch_mode = 6
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Mouse", "Rect", "Size Flags", "Visibility" ]
+
+[node name="Trees" type="ParallaxLayer" parent="ParallaxTitleScreen" index="6"]
+
+motion_scale = Vector2( 16, 1 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 2048, 0 )
+_sections_unfolded = [ "Motion", "Transform" ]
+
+[node name="Image" type="TextureRect" parent="ParallaxTitleScreen/Trees" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 10 )
+stretch_mode = 6
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Mouse", "Rect", "Size Flags", "Visibility" ]
+
+[node name="Ground" type="ParallaxLayer" parent="ParallaxTitleScreen" index="7"]
+
+motion_scale = Vector2( 16, 1 )
+motion_offset = Vector2( 0, 0 )
+motion_mirroring = Vector2( 2048, 0 )
+_sections_unfolded = [ "Motion", "Transform" ]
+
+[node name="Image" type="TextureRect" parent="ParallaxTitleScreen/Ground" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 2048.0
+margin_bottom = 1546.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 11 )
+stretch_mode = 6
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Mouse", "Rect", "Size Flags", "Visibility" ]
+
+[node name="Header" type="HBoxContainer" parent="." index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 19.0
+margin_top = 31.0
+margin_right = 1853.0
+margin_bottom = 128.0
+rect_pivot_offset = Vector2( 0, 0 )
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+_sections_unfolded = [ "Focus", "Grow Direction", "Hint", "Margin", "Mouse", "Rect", "Size Flags" ]
+
+[node name="Button" type="Button" parent="Header" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 289.0
+margin_bottom = 97.0
+rect_pivot_offset = Vector2( 0, 0 )
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+pressed = true
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "1920x1080"
+flat = false
+align = 1
+_sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Rect", "custom_fonts" ]
+
+[node name="Button2" type="Button" parent="Header" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 293.0
+margin_right = 557.0
+margin_bottom = 97.0
+rect_pivot_offset = Vector2( 0, 0 )
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "1280x720"
+flat = false
+align = 1
+_sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Rect", "custom_fonts" ]
+
+[node name="Button3" type="Button" parent="Header" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 561.0
+margin_right = 829.0
+margin_bottom = 97.0
+rect_pivot_offset = Vector2( 0, 0 )
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = SubResource( 3 )
+toggle_mode = true
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "1024x576"
+flat = false
+align = 1
+_sections_unfolded = [ "Anchor", "Grow Direction", "Margin", "Rect", "custom_fonts" ]
+
+[connection signal="pressed" from="Header/Button" to="." method="_on_change_resolution_pressed" binds= [ Vector2( 1920, 1080 ) ]]
+
+[connection signal="pressed" from="Header/Button2" to="." method="_on_change_resolution_pressed" binds= [ Vector2( 1280, 720 ) ]]
+
+[connection signal="pressed" from="Header/Button3" to="." method="_on_change_resolution_pressed" binds= [ Vector2( 1024, 576 ) ]]
+
+
